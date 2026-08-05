@@ -1,0 +1,117 @@
+@import "colors.css";
+
+
+/* main bar */
+* {
+    border: none;
+    font-family: monospace;
+    font-size: 13px;
+}
+window#waybar {
+    background-color: @background;
+    border-bottom: 1px solid @border;
+    color: @text;
+    padding: 0 8px;
+}
+
+
+/* tooltip */
+tooltip {
+    background-color: @background;
+    border-radius: 10px;
+    border: 2px solid @border;
+}
+tooltip label {
+    color: @text;
+}
+
+
+/* left modules */
+#custom-appmenu {
+    padding: 2px 8px;
+    background: @primary;
+    border-radius: 10px;
+    color: @text;
+    margin: 4px;
+}
+#custom-appmenu:hover {
+    background: @primary-bright;
+}
+
+#window {
+    color: @text;
+    margin: 4px;
+}
+
+/* centre modules  */
+#workspaces button {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 1px 10px;
+    margin: 4px;
+    border-radius: 10px;
+    color: @secondary-bright;
+    background-color: @secondary;
+    background-image: none;
+}
+#workspaces button.active {
+    color: @text;
+    background: @primary;
+}
+#workspaces button:hover {
+    color: @text;
+    background-color: @primary-bright;
+    background-image: none;
+}
+#workspaces button.urgent {
+    color: @text;
+    background-color: @ws-urgent;
+}
+
+
+/* right modules */
+
+#custom-newworkspace {
+	border: none;
+	outline: none;
+	box-shadow: none;
+	padding: 1px 10px;
+	margin: 4px;
+	border-radius: 10px;
+	color: @text;
+	background-color: @primary;
+	background-image: none;
+}
+#custom-newworkspace:hover {
+	background-color: @primary-bright;
+}
+
+#pulseaudio,
+#network,
+#tray,
+#cpu,
+#memory,
+#clock {
+    padding: 2px 8px;
+    background: @primary;
+    border-radius: 10px;
+    color: @text;
+    margin: 4px;
+}
+
+#pulseaudio:hover,
+#network:hover,
+#tray:hover,
+#cpu:hover,
+#memory:hover,
+#clock:hover {
+    background-color: @primary-bright;
+}
+
+#tray {
+    padding: 0px 8px;
+}
+#tray > .item {
+    padding: 0 4px;
+}

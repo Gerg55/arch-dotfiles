@@ -1,0 +1,12 @@
+@define-color background rgba(20, 20, 20, 0.5);
+@define-color border #595959;
+
+@define-color text #FFFFFF;
+
+@define-color primary          #359bb8;
+@define-color primary-bright   #79c3d8;
+
+@define-color secondary        #595959;
+@define-color secondary-bright #8c8c8c;
+
+@define-color ws-urgent rgb(255, 80, 80);

@@ -1,0 +1,8 @@
+on-button-left=invoke-default-action
+on-button-right=dismiss
+
+border-color=#359bb8FF
+border-radius=8
+background-color=#141414CC
+
+default-timeout=5000

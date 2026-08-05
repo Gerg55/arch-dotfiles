@@ -1,0 +1,28 @@
+{
+    // general settings
+    "layer": "top",
+    "height":34,
+
+    // load modules
+    "include": ["~/.config/waybar/modules.jsonc"],
+
+    "modules-left": [
+        "custom/appmenu",
+        "hyprland/window"
+    ],
+
+    "modules-center": [
+        "hyprland/workspaces",
+    ],
+    
+    "modules-right": [
+        "custom/newworkspace",
+        "pulseaudio",
+        "network",
+        "group/hardware",
+        "cpu",
+        "memory",
+        "tray",
+        "clock"
+    ]
+}

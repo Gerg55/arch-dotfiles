@@ -1,0 +1,111 @@
+* {
+    font: "Adwaita Mono 13";
+
+    item-color: #141414Ff;
+    item-border: 2px solid;
+    item-border-radius: 10px;
+    item-border-color: #595959FF;
+    g-margin: 0;
+    g-spacing: 5px;
+    g-padding: 5px;
+    b-color: #141414FF;
+    fg-color: #FFFFFFFF;
+    fgp-color: #888888FF;
+    b-radius: 8px;
+    hl-color: #359bb8FF;
+    hlt-color: #FFFFFFFF;
+    wbg-color: #141414CC;
+    w-border: 2px solid;
+    w-border-color: #898989ff;
+    w-padding: 5px;
+}
+
+configuration {
+    modi: "drun";
+    show-icons: true;
+    display-drun: "";
+}
+
+listview {
+    columns: 1;
+    lines: 7;
+    fixed-height: true;
+    fixed-columns: true;
+    cycle: false;
+    scrollbar: false;
+    border: 0px solid;
+}
+
+window {
+    transparency: "real";
+    width: 450px;
+    border-radius: @b-radius;
+    background-color: @wbg-color;
+    border: @w-border;
+    border-color: @w-border-color;
+    padding: @w-padding;
+}
+
+prompt {
+    padding: 6px 8px;
+    text-color: @fg-color;
+}
+
+inputbar {
+    children: ["prompt", "entry"];
+    spacing: @g-spacing;
+    border: @item-border;
+    border-radius: @item-border-radius;
+    border-color: @item-border-color;
+    background-color: @item-color;
+}
+
+entry {
+    padding: 6px 8px;
+    placeholder: "Search Apps";
+    text-color: @fg-color;
+    placeholder-color: @fgp-color;
+}
+
+mainbox {
+    spacing: @g-spacing;
+    margin: @g-margin;
+    padding: @g-padding;
+    children: ["inputbar", "listview", "message"];
+}
+
+element {
+    spacing: @g-spacing;
+    margin: @g-margin;
+    padding: @g-padding;
+    border: 0px solid;
+    border-radius: @item-border-radius;
+    border-color: @b-color;
+    background-color: transparent;
+    text-color: @fg-color;
+}
+
+element normal.normal {
+	background-color: @item-color;
+	text-color: @fg-color;
+}
+
+element alternate.normal {
+	background-color: @item-color;
+	text-color: @fg-color;
+}
+
+element selected.active {
+	background-color: @hl-color;
+	text-color: @hlt-color;
+}
+
+element selected.normal {
+	background-color: @hl-color;
+	text-color: @hlt-color;
+}
+
+message {
+    background-color: red;
+    border: 0px solid;
+}
