@@ -24,12 +24,22 @@ hl.bind(mainMod .. " + right", hl.dsp.focus({direction = "right"}))
 hl.bind(mainMod .. " + up",    hl.dsp.focus({direction = "up"}))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({direction = "down"}))
 
--- move focused window with mainMid + SHIFT + arrow keys
+-- move focused window with mainMod + SHIFT + arrow keys
 hl.bind(mainMod .. " + SHIFT + left",  hl.dsp.window.move({direction = "left"}))
 hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({direction = "right"}))
 hl.bind(mainMod .. " + SHIFT + up",    hl.dsp.window.move({direction = "up"}))
 hl.bind(mainMod .. " + SHIFT + down",  hl.dsp.window.move({direction = "down"}))
 
+-- cycle windows w/ ALT+TAB
+hl.bind("ALT + TAB", hl.dsp.window.cycle_next())
+hl.bind("ALT + SHIFT + TAB", hl.dsp.focus({workspace = "e-1"}))
+
+-- move focused window smoothly with mainMod + CONTROL + arrow keys
+local moveRate = 20
+hl.bind(mainMod .. " + CONTROL + left",  hl.dsp.window.move({x = -moveRate, y = 0, relative = true}), {repeating = true})
+hl.bind(mainMod .. " + CONTROL + right", hl.dsp.window.move({x =  moveRate, y = 0, relative = true}), {repeating = true})
+hl.bind(mainMod .. " + CONTROL + up",    hl.dsp.window.move({x = 0, y = -moveRate, relative = true}), {repeating = true})
+hl.bind(mainMod .. " + CONTROL + down",  hl.dsp.window.move({x = 0, y =  moveRate, relative = true}), {repeating = true})
 
 -- resize focused window with mainMid + ALT + arrow keys
 local scaleRate = 20
@@ -50,16 +60,17 @@ end
 -- new workspace
 hl.bind(mainMod .. " + TAB", hl.dsp.focus({workspace = "emptynm"}))
 
--- scroll workspaces w/ ALT+TAB
-hl.bind("ALT + TAB", hl.dsp.focus({workspace = "e+1"}))
-hl.bind("ALT + SHIFT + TAB", hl.dsp.focus({workspace = "e-1"}))
 
 -- Example special workspace (scratchpad)
 hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
 
--- Scroll through existing workspaces with mainMod + scroll
+-- scroll workspaces w/ mainMod + something else
+hl.bind(mainMod .. " + page_down", hl.dsp.focus({workspace = "e+1"}))
+hl.bind(mainMod .. " + page_up", hl.dsp.focus({workspace = "e-1"}))
+
+-- scroll workspaces w/ mainMod + scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
 
