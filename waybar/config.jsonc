@@ -18,11 +18,13 @@
     "modules-right": [
         "custom/newworkspace",
         "pulseaudio",
+				// "mpris",
         "network",
         "group/hardware",
         "cpu",
         "memory",
         "tray",
-        "clock"
+        "clock",
+        "custom/power"
     ]
 }

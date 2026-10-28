@@ -1,12 +1,20 @@
-@define-color background rgba(20, 20, 20, 0.5);
-@define-color border #595959;
+@define-color background rgba(20, 24, 27, 0.70);
+@define-color border rgba(63, 83, 89, 1.0);
 
-@define-color text #FFFFFF;
+@define-color tt-background rgba(20, 24, 27, 0.88);
 
-@define-color primary          #359bb8;
-@define-color primary-bright   #79c3d8;
+@define-color text-bright   #ffffff;
+@define-color text          #d5e2e7;
+@define-color text-dark     #91a5ad;
 
-@define-color secondary        #595959;
-@define-color secondary-bright #8c8c8c;
+@define-color accent        #286b7d;
+@define-color accent-bright #65c9e4;
 
-@define-color ws-urgent rgb(255, 80, 80);
+@define-color idk        #39464c;
+@define-color idk-bright #52656d;
+
+@define-color surface-dim   #20333b;
+@define-color surface       #294750;
+@define-color surface-hover #366c7c;
+
+@define-color urgent #e56b73;

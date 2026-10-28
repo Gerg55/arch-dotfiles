@@ -1,117 +1,135 @@
 @import "colors.css";
 
-
-/* main bar */
+/* Global */
 * {
     border: none;
     font-family: monospace;
-    font-size: 13px;
+    min-height: 0;
 }
+
+/* Main bar */
 window#waybar {
+    font-size: 14px;
     background-color: @background;
-    border-bottom: 1px solid @border;
+    border-bottom: 2px solid @border;
     color: @text;
-    padding: 0 8px;
+    padding: 0 6px;
 }
 
-
-/* tooltip */
+/* Tooltips */
 tooltip {
-    background-color: @background;
-    border-radius: 10px;
-    border: 2px solid @border;
+    background-color: @tt-background;
+    border: 2px solid @surface-hover;
+    border-radius: 6px;
 }
+
 tooltip label {
-    color: @text;
+    color: @text-bright;
+    padding: 4px 6px;
 }
 
-
-/* left modules */
+/* Left modules */
 #custom-appmenu {
-    padding: 2px 8px;
-    background: @primary;
-    border-radius: 10px;
-    color: @text;
-    margin: 4px;
+    font-size: 17px;
+    padding: 2px 13px 2px 8px;
+    margin: 4px 3px 4px 6px;
+    border-radius: 6px;
+    color: @text-bright;
+    background: @surface;
 }
+
 #custom-appmenu:hover {
-    background: @primary-bright;
+  background: @surface-hover;
 }
 
 #window {
     color: @text;
-    margin: 4px;
+    margin: 4px 6px;
+    padding: 2px 8px 2px 8px;
+    border-radius: 6px;
+    color: @text;
+    background: @surface-dim;
 }
 
-/* centre modules  */
+/* Workspaces */
+#workspaces {
+    margin: 4px 3px;
+    padding: 0 2px;
+}
+
 #workspaces button {
-    border: none;
-    outline: none;
-    box-shadow: none;
-    padding: 1px 10px;
-    margin: 4px;
-    border-radius: 10px;
-    color: @secondary-bright;
-    background-color: @secondary;
-    background-image: none;
+    padding: 0 9px;
+    margin: 0 3px;
+    color: @text-dark;
+    background: @surface;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
 }
+
 #workspaces button.active {
-    color: @text;
-    background: @primary;
+    color: @text-bright;
+    background: @surface-hover;
+    border-bottom: 2px solid @accent-bright;
 }
+
 #workspaces button:hover {
-    color: @text;
-    background-color: @primary-bright;
-    background-image: none;
+    color: @text-bright;
+    background: @surface-hover;
 }
+
 #workspaces button.urgent {
-    color: @text;
-    background-color: @ws-urgent;
+    color: @text-bright;
+    background: @urgent;
 }
 
-
-/* right modules */
-
-#custom-newworkspace {
-	border: none;
-	outline: none;
-	box-shadow: none;
-	padding: 1px 10px;
-	margin: 4px;
-	border-radius: 10px;
-	color: @text;
-	background-color: @primary;
-	background-image: none;
-}
-#custom-newworkspace:hover {
-	background-color: @primary-bright;
-}
-
+/* Right-side modules */
+#custom-newworkspace,
+#custom-mpris-scroll,
 #pulseaudio,
 #network,
 #tray,
 #cpu,
 #memory,
 #clock {
-    padding: 2px 8px;
-    background: @primary;
-    border-radius: 10px;
+    padding: 0 9px;
+    margin: 4px 3px;
     color: @text;
-    margin: 4px;
+    background: @surface;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
 }
 
+/* Hover states */
+#custom-newworkspace:hover,
+#custom-mpris-scroll:hover,
 #pulseaudio:hover,
 #network:hover,
-#tray:hover,
 #cpu:hover,
 #memory:hover,
 #clock:hover {
-    background-color: @primary-bright;
+    color: @text-bright;
+    background: @surface-hover;
 }
 
-#tray {
-    padding: 0px 8px;
+
+#custom-power {
+  padding: 2px 11px 2px 8px;
+  margin: 4px 6px 4px 6px;
+  color: @text;
+  background: @surface;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
 }
+#custom-power:hover {
+    color: @text-bright;
+    background: @urgent;
+}
+
+/* Tray */
+#tray {
+    padding: 0 6px;
+}
+
 #tray > .item {
-    padding: 0 4px;
+    padding: 0 3px;
 }

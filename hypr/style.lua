@@ -7,8 +7,8 @@ hl.config({
 
     -- https://wiki.hypr.land/Configuring/Variables/#variable-types for info about colors
     col = {
-      active_border = "rgba(359bb8FF)",
-      inactive_border = "rgba(595959FF)",
+      active_border = "rgba(65c9e4FF)",
+      inactive_border = "rgba(3F5359FF)",
     },
 
     -- Set to true enable resizing windows by clicking and dragging on borders and gaps

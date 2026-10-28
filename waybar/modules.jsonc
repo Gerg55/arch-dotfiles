@@ -1,11 +1,12 @@
 {
     "custom/appmenu": {
-        "format": " Apps",
+        "format": "",
         "on-click": "rofi -show drun",
-        "tooltip-format": "Open the application launcher"
+        "tooltip": false
     },
 		"hyprland/window": {
-			"separate-outputs": true
+			"separate-outputs": true,
+			"tooltip": false
 		},
 
 
@@ -23,8 +24,7 @@
 		"custom/newworkspace": {
 			"format": "",
 			"on-click": "hyprctl dispatch 'hl.dsp.focus({workspace = \"emptynm\"})'",
-            "tooltip": true,
-            "tooltip-format": "Opens a new workspace"
+      "tooltip": false,
 		},
 
     "tray": {
@@ -64,5 +64,11 @@
         "format-muted": "󰝟 muted",
 				"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
 				"on-click-right": "pavucontrol"
+    },
+    
+    "custom/power": {
+      "format" : "⏻",
+      // "on-click": 
+      "tooltip": false
     }
 }
